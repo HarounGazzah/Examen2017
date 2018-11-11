@@ -1,0 +1,12 @@
+<div *ngIf="cancelDiv" style="border: 2px solid; width: 300px; border-radius: 5px; padding: 5px; margin-top: 5px;" >
+  <fieldset>
+    {{ ticket.title }} -- assignedTo {{ ticket.assignedTo }} <br>
+    <div *ngIf="showDetail">
+      <b>Id:</b> {{ ticket.id }}
+      <b>Completed:</b>{{ ticket.doing }}
+      <b>Description</b>{{ ticket.description }}
+    </div>
+    <button (click)="cancel()">Cancel</button>
+    <button (click)="showDetails()">Details</button>
+  </fieldset>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="container">
+
+  <form (ngSubmit)="save()">
+    <label>Title</label>
+    <input type="texte" name="title" [(ngModel)]="ticket.title"><br>
+    <label>Assigned to</label>
+    <input type="texte" name="assignedTo" [(ngModel)]="ticket.assignedTo">
+    <label>Completed %</label>
+    <input style="width: 32px" name="doing" type="texte" [(ngModel)]="ticket.doing"><br>
+    <textarea cols="55" name="description" [(ngModel)]="ticket.description"></textarea><br>
+    <button type="submit">Save</button>
+  </form>
+
+    <div *ngFor="let ticket of listTickets">
+      <app-ticket [ticket]="ticket"></app-ticket>
+    </div>
+
+</div>

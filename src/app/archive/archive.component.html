@@ -1,0 +1,17 @@
+<table border=1>
+  <tr>
+    <td>#</td>
+    <td>Title</td>
+    <td>AssignedTo</td>
+    <td>%</td>
+    <td>Description</td>
+  </tr>
+  <tr *ngFor="let ticket of listTicket" >
+    <td>{{ ticket.id }}</td>
+    <td>{{ ticket.title }}</td>
+    <td>{{ ticket.assignedTo }}</td>
+    <td>{{ ticket.doing }}</td>
+    <td>{{ ticket.description }}</td>
+
+  </tr>
+</table>
